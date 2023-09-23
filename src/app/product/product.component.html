@@ -1,0 +1,30 @@
+<p>product works!</p>
+<!--<input type="text" name="color" (change)="getColor(t.value)" #t>
+<h1 [style.color]="getColor(t.value)">{{title}}</h1>-->
+<input type="text" name="color" [(ngModel)]="color">
+{{color}}
+<h1 [style.color]="getColor()">{{title}}</h1>
+{{product.id}}
+{{product.name}}
+{{product.price}}
+
+<div *ngIf="products.length != 0">
+<table>
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Quantity</td>
+    </tr>
+    <tr *ngFor="let p of products">
+        <td>{{p.id}}</td>
+        <td [style.color]="p.quantity == 0 ? 'red':'green'">{{p.name}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.quantity}}</td>
+        <td><button [disabled]="p.quantity == 0" (click)="Acheter(p)" >Acheter</button></td>
+    </tr>
+</table>
+</div>
+<div *ngIf="products.length == 0">
+    <p>No Products Found</p>
+</div>
