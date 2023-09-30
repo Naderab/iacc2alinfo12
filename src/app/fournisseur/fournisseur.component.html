@@ -1,0 +1,8 @@
+<fieldset [hidden]="hide">
+    Id Fournisseur : {{idFournisseur}}<br>
+    Code : {{code}}<br>
+    Libelle : {{libelle}}<br>
+</fieldset>
+<!-- <button *ngIf="hide == false" (click)="changeHide()">Cacher</button>
+<button *ngIf="hide == true" (click)="changeHide()">Afficher</button>-->
+<button (click)="changeHide()">{{hide?'Afficher':'Cacher'}}</button>

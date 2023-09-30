@@ -1,0 +1,8 @@
+
+<div *ngFor="let f of fournisseurs">
+    <fieldset (dblclick)="deleteFournisseur(f)" [style.background-color]="f.libelle == 'hp' ? 'green' : 'yellow'" *ngIf="f.idFournisseur <= 100">
+        <legend>{{f.idFournisseur}}</legend>
+        <p [style.font-weight]="f.code.startsWith('2A')?'bold':'none'">Code : {{f.code}}</p>
+        <p>Code : {{f.libelle}}</p>
+    </fieldset>
+</div>
