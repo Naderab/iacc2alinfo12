@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Fournisseur } from 'src/core/fournisseur';
 
 @Component({
@@ -7,6 +8,10 @@ import { Fournisseur } from 'src/core/fournisseur';
   styleUrls: ['./list-fournisseur.component.css'],
 })
 export class ListFournisseurComponent {
+
+  constructor(private router: Router) {
+  }
+  
   fournisseurs: Fournisseur[] = [
     { idFournisseur: 1, code: '1ABC4522', libelle: 'hp' },
     { idFournisseur: 2, code: '2ABC4522', libelle: 'dell' },
@@ -19,5 +24,9 @@ export class ListFournisseurComponent {
     if (index != -1) {
       this.fournisseurs.splice(index, 1);
     }
+  }
+
+  toDetails(id: number, name: string) {
+    this.router.navigate(['/fournisseur',id,name])
   }
 }

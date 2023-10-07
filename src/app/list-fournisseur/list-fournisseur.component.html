@@ -4,5 +4,6 @@
         <legend>{{f.idFournisseur}}</legend>
         <p [style.font-weight]="f.code.startsWith('2A')?'bold':'none'">Code : {{f.code}}</p>
         <p>Code : {{f.libelle}}</p>
+        <button (click)="toDetails(f.idFournisseur,f.libelle)">ToDetails</button>
     </fieldset>
 </div>

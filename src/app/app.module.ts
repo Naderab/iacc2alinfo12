@@ -7,13 +7,19 @@ import { ProductComponent } from './product/product.component';
 import { FormsModule } from '@angular/forms';
 import { FournisseurComponent } from './fournisseur/fournisseur.component';
 import { ListFournisseurComponent } from './list-fournisseur/list-fournisseur.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { DetailsFournisseurComponent } from './details-fournisseur/details-fournisseur.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     FournisseurComponent,
-    ListFournisseurComponent
+    ListFournisseurComponent,
+    NotFoundComponent,
+    DetailsFournisseurComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
