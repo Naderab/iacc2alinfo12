@@ -4,9 +4,9 @@
 <input type="text" name="color" [(ngModel)]="color">
 {{color}}
 <h1 [style.color]="getColor()">{{title}}</h1>
-{{product.id}}
+<!--{{product.id}}
 {{product.name}}
-{{product.price}}
+{{product.price}}-->
 
 <div *ngIf="products.length != 0">
 <table>
@@ -22,6 +22,8 @@
         <td>{{p.price}}</td>
         <td>{{p.quantity}}</td>
         <td><button [disabled]="p.quantity == 0" (click)="Acheter(p)" >Acheter</button></td>
+        <td><button (click)="delete(p.id)">Delete</button></td>
+
     </tr>
 </table>
 </div>

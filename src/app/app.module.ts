@@ -10,7 +10,7 @@ import { ListFournisseurComponent } from './list-fournisseur/list-fournisseur.co
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DetailsFournisseurComponent } from './details-fournisseur/details-fournisseur.component';
 import { NavbarComponent } from './navbar/navbar.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +24,8 @@ import { NavbarComponent } from './navbar/navbar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
