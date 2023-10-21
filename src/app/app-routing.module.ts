@@ -5,13 +5,16 @@ import { ListFournisseurComponent } from './list-fournisseur/list-fournisseur.co
 import { FournisseurComponent } from './fournisseur/fournisseur.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DetailsFournisseurComponent } from './details-fournisseur/details-fournisseur.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 const routes: Routes = [
   { path: 'products', component: ProductComponent },
   { path: 'fournisseurs', component: ListFournisseurComponent },
   { path: 'fournisseur', component: FournisseurComponent },
-  {path:'fournisseur/:id/:name',component:DetailsFournisseurComponent},
+  { path: 'fournisseur/:id/:name', component: DetailsFournisseurComponent },
   { path: '', redirectTo: 'products', pathMatch: 'full' },
+  { path: 'addProduct', component: AddProductComponent },
+  { path: 'updateProduct/:id', component: AddProductComponent },
   { path: '**', component: NotFoundComponent },
 ];
 

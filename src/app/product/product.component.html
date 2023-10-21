@@ -23,7 +23,7 @@
         <td>{{p.quantity}}</td>
         <td><button [disabled]="p.quantity == 0" (click)="Acheter(p)" >Acheter</button></td>
         <td><button (click)="delete(p.id)">Delete</button></td>
-
+        <td><a [routerLink]="['/updateProduct/',p.id]">Update</a></td>
     </tr>
 </table>
 </div>

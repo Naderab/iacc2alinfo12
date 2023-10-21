@@ -11,6 +11,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { DetailsFournisseurComponent } from './details-fournisseur/details-fournisseur.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AddProductComponent } from './add-product/add-product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     ListFournisseurComponent,
     NotFoundComponent,
     DetailsFournisseurComponent,
-    NavbarComponent
+    NavbarComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,

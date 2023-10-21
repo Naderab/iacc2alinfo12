@@ -1,0 +1,20 @@
+<form #f="ngForm" (ngSubmit)="add()">
+    <label>Name :</label>
+    <input type="text" name="name" [(ngModel)]="product.name" required minlength="5" pattern="[A-Za-z]+[0-9]*[!+,à/\_-]*" #name="ngModel">
+    <div *ngIf="name.invalid && name.touched">
+    <div *ngIf="name.errors!['required']">Name is required</div>
+    <div *ngIf="name.errors!['minlength']">Name must have at least 5 characters</div>
+    <div *ngIf="name.errors!['pattern']">Name invalid</div>
+    </div>
+    <label>Price :</label>
+    <input type="number" name="price" [(ngModel)]="product.price" min="1" #price="ngModel">
+    <div *ngIf="price.invalid && price.touched">
+    <div>Price must be positive</div>
+    </div>
+    <label>Quantity :</label>
+    <input type="number" name="quantity" [(ngModel)]="product.quantity" min="1" #quantity="ngModel">
+    <div *ngIf="quantity.invalid && quantity.touched">
+    <div>Quantity must be positive</div>
+    </div>
+    <input type="submit" [value]="getButtonMessage()" [disabled]="f.invalid">
+</form>
