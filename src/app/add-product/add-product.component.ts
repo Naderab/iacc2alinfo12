@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/core/product';
 import { ProductConsumerService } from '../services/product-consumer.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-add-product',
@@ -26,7 +27,8 @@ export class AddProductComponent implements OnInit{
    }
 
 
-  add() {
+  add(f:NgForm) {
+    console.log(f.controls)
     if (this.id !== undefined) {
       this._productConsumer.updateProduct(this.product).subscribe({
         next: () => this._router.navigate(['/products']),
